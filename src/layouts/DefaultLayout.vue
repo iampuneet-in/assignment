@@ -1,19 +1,19 @@
 <template>
     <div class="default-layout">
         <main>
+            <Navigation />
             <slot></slot>
         </main>
     </div>
 </template>
 
 <script>
-import { defineComponent } from '@vue/composition-api'
-
-export default defineComponent({
-    setup() {
-        
-    },
-})
+import Navigation from '../components/Navigation.vue'
+export default {
+    components: {
+        Navigation
+    }
+}
 </script>
 
 <style scoped>
