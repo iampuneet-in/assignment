@@ -1,17 +1,17 @@
 <template>
     <div class="default-layout">
         <main>
-            <Navigation />
+            <navbar />
             <slot></slot>
         </main>
     </div>
 </template>
 
 <script>
-import Navigation from '../components/Navigation.vue'
+import Navbar from '../components/Navbar.vue'
 export default {
     components: {
-        Navigation
+        Navbar
     }
 }
 </script>
