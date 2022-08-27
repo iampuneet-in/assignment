@@ -1,10 +1,12 @@
 <template>
   <div class="flex flex-col items-center justify-center object-cover w-full h-full text-gray-500 bg-black rounded">
+     <router-link :to="{ name: 'details', params: { id: show.id } }">
     <img
       class="object-cover w-full h-full rounded"
       :src="show.image.medium"
       :alt="`TV show image of ${show.name}`"
     />
+     </router-link>
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2">{{ show?.name }}</div>
     </div>
