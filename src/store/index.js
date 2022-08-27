@@ -1,8 +1,7 @@
 import { createStore } from 'vuex';
-import shows from './shows.store'
 import api from '@/helpers/api';
 
-const returnData = (data) => data;
+const returnData = ({data}) => data;
 
 
 export default createStore({
@@ -20,24 +19,6 @@ export default createStore({
           options.method = 'get';
           return dispatch('send', options);
         },
-        post({ dispatch }, options) {
-          options.method = 'post';
-          return dispatch('send', options);
-        },
-        put({ dispatch }, options) {
-          options.method = 'put';
-          return dispatch('send', options);
-        },
-        patch({ dispatch }, options) {
-          options.method = 'patch';
-          return dispatch('send', options);
-        },
-        delete({ dispatch }, options) {
-          options.method = 'delete';
-          return dispatch('send', options);
-        },
       },
-    modules: {
-        shows
-    }
+    modules: {}
 })
