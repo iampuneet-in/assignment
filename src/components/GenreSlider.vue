@@ -1,7 +1,8 @@
 <template>
+ <h2 class=" text-4xl font-bold">{{ genre }}</h2>
   <carousel :items-to-show="5" :wrap-around="true">
-    <slide v-for="slide in 10" :key="slide">
-      <card />
+    <slide v-for="(show, index) in shows" :key="`${show.id}-${index}`">
+      <card :show="show"  />
     </slide>
     <template #addons>
       <navigation />
@@ -18,15 +19,17 @@ export default {
   components: { Carousel, Navigation, Slide, Card },
   props: {
     shows: {
-        type: Object,
-        required: true
+      type: Object,
+      required: true
     },
     genre: {
-        type: String,
-        required: true
-    },
+      type: String,
+      required: true
+    }
   },
-  setup() {}
+  setup(props) {
+    console.log(props.genre)
+  }
 }
 </script>
 

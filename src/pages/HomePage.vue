@@ -22,8 +22,7 @@ export default {
         action: '/shows'
       });
       showsByGenre.value = useGroupByGenre(response);
-    })
-
+    });
     return {
       showsByGenre
     }
