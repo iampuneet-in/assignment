@@ -8,7 +8,8 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "down": "docker-compose down",
-    "up": "docker-compose up"
+    "up": "docker-compose up",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "@tailwindcss/postcss7-compat": "^2.2.17",
@@ -29,11 +30,14 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@cypress/vue": "^3.1.0",
+    "@cypress/webpack-dev-server": "^2.2.0",
     "@vue/cli-plugin-babel": "~4.5.3",
     "@vue/cli-plugin-eslint": "~4.5.3",
     "@vue/cli-service": "~4.5.3",
     "@vue/compiler-sfc": "^3.2.37",
     "babel-eslint": "^10.1.0",
+    "cypress": "^10.6.0",
     "eslint": "^6.7.2",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
