@@ -28,7 +28,7 @@ export default {
     }
   },
   setup(props) {
-    console.log(props.genre)
+    console.log(props.shows);
   }
 }
 </script>

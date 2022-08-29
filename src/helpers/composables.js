@@ -1,7 +1,6 @@
 const genres = ["Action", "Drama", "Comedy", "Thriller", "Romance"];
 
 export const useGroupByGenre = (shows) => {
-    console.log(shows);
     return genres.map((genre) => {
       return {
         genre,
@@ -10,3 +9,7 @@ export const useGroupByGenre = (shows) => {
     });
 };
   
+
+export const useSortByRating = (shows) => {
+  return shows.sort((a, b) => b.rating.average - a.rating.average).slice(0, 20);
+};

@@ -6,11 +6,13 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
+    "docker:test:unit": "docker exec -it vue-tv-assignment yarn test:unit",
     "lint": "vue-cli-service lint",
     "down": "docker-compose down",
     "up": "docker-compose up",
     "cypress:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "docker:cy:run": "docker exec -it vue-tv-assignment cypress run"
   },
   "dependencies": {
     "@tailwindcss/postcss7-compat": "^2.2.17",
