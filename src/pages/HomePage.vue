@@ -18,10 +18,8 @@ export default {
     const store = useStore()
     const showsByGenre = ref({})
     onMounted(async () => { 
-      const response = await store.dispatch('get', {
-        action: '/shows'
-      });
-      showsByGenre.value = useGroupByGenre(response);
+      await store.dispatch('shows/getAllShows');
+      showsByGenre.value = useGroupByGenre(store.state.shows.shows);
     });
     return {
       showsByGenre
