@@ -4,7 +4,7 @@
 ## Project setup
 
 ### Prerequisites
-As we are using docker so you don't need to install any specific software other docker itself.
+As we are using docker so you don't need to install any specific software other than docker itself.
 - Docker installed
 - Git
 ```
