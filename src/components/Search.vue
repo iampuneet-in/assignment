@@ -54,7 +54,6 @@ export default {
     const router = useRouter();
 
     function searchTvShows() {
-      console.log(searchText.value);
       router.push({
         name: 'search',
         query: {

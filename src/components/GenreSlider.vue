@@ -1,5 +1,5 @@
 <template>
-  <h2 class="text-4xl font-bold">{{ genre }}</h2>
+  <h2 data-test="genre" class="text-4xl font-bold">{{ genre }}</h2>
   <carousel :items-to-show="5" :wrap-around="true">
     <slide v-for="(show, index) in shows" :key="`${show.id}-${index}`">
           <card :show="show" />

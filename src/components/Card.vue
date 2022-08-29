@@ -3,12 +3,13 @@
      <router-link :to="{ name: 'details', params: { id: show.id } }">
     <img
       class="object-cover w-full h-full rounded"
+      data-test = "show-image"
       :src="show.image.medium"
       :alt="`TV show image of ${show.name}`"
     />
      </router-link>
     <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2">{{ show?.name }}</div>
+      <div  data-test="show-name" class="font-bold text-xl mb-2">{{ show?.name }}</div>
     </div>
     <div class="px-6 pt-4 pb-2">
       <span
