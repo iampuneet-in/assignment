@@ -49,7 +49,7 @@ jobs:
               uses: s0/git-publish-subdir-action@develop
               env:
                 REPO: self
-                BRANCH: master
+                BRANCH: main
                 FOLDER: dist
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 BASE_URL: https://api.tvmaze.com
