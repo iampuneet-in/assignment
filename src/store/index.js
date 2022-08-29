@@ -1,5 +1,6 @@
 import { createStore } from 'vuex';
 import api from '@/helpers/api';
+import shows from './shows';
 
 const returnData = ({data}) => data;
 
@@ -20,5 +21,7 @@ export default createStore({
           return dispatch('send', options);
         },
       },
-    modules: {}
-})
+    modules: {
+      shows,
+    }
+});
