@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  app:
+    container_name: vue-tv-assignment
+    stdin_open: true
+    tty: false
+    build:
+      context: .
+      dockerfile: ./ops/docker/Dockerfile
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    ports:
+      - 8080:8080
+    environment:
+      - NODE_ENV=development
+      - VUE_APP_NAME=TV API
+    command: bin/docker.entry.local.sh
