@@ -1,4 +1,4 @@
-import { shallowMount  } from '@vue/test-utils'
+import { shallowMount, RouterLinkStub   } from '@vue/test-utils'
 import Card from '@/components/Card.vue'
 import { shows } from '../fixtures/show'
 
@@ -14,7 +14,10 @@ describe('Card.vue', () => {
     const card = shallowMount(Card, {
         propsData: {
           show: shows,
-        }
+        },
+        stubs: {
+          RouterLink: RouterLinkStub
+      }
     });
     const cardImage = card.get('[data-test="show-image"]');
     expect(cardImage.attributes().src).toBe(shows.image.medium);

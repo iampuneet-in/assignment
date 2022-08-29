@@ -26,9 +26,9 @@ jobs:
             - name: Run unit test cases
               run: |
                 yarn test:unit
-            - name: Run e2e test cases
-              run: |
-                yarn cy:run
+            # - name: Run e2e test cases
+            #   run: |
+            #     yarn cy:run
             - name: Deploy
               uses: s0/git-publish-subdir-action@develop
               env:

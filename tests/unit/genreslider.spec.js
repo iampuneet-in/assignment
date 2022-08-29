@@ -1,4 +1,4 @@
-import { shallowMount } from '@vue/test-utils'
+import { shallowMount, RouterLinkStub } from '@vue/test-utils'
 import GenreSlider from '@/components/GenreSlider.vue'
 import { shows } from '../fixtures/show'
 // refactoring
@@ -14,7 +14,10 @@ describe('GenreSlider.vue', () => {
         propsData: {
             shows: [shows],
             genre: "Action"
-        }
+        },
+        stubs: {
+          RouterLink: RouterLinkStub
+      }
     });
     expect(genreSlider.find('h2').text()).toMatch('Action')
   })
