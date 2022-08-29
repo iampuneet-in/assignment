@@ -2,13 +2,6 @@ import { shallowMount, RouterLinkStub   } from '@vue/test-utils'
 import Card from '@/components/Card.vue'
 import { shows } from '../fixtures/show'
 
-// refactoring
-// function factory (propsData) {
-//     return shallowMount(GenreSlider, {
-//         propsData
-//     })
-// }
-
 describe('Card.vue', () => {
   it('check if card is using medium size image only on the landing page', () => {
     const card = shallowMount(Card, {
